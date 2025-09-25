@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dokkai Quiz</title>
+  <link rel="stylesheet" href="assets/assetscss/dokkai.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Dokkai Quiz</h1>
+
+    <!-- Cerita -->
+    <div id="story-box" class="card story"></div>
+
+    <!-- Soal & Opsi -->
+    <div id="question-box" class="card question"></div>
+
+    <!-- Skor -->
+    <div id="score-board" class="card score">
+      <strong>Pemain:</strong> <span id="playerName"></span><br>
+      <strong>Skor:</strong> <span id="score">0</span>
+    </div>
+
+    <!-- Navigasi -->
+    <div class="controls">
+      <button id="next-btn" class="btn">Soal Berikutnya</button>
+      <a href="index.html" id="home-btn" class="btn">Menu Utama</a>
+    </div>
+  </div>
+
+  <script src="assets/assetsjs/data.js"></script>
+  <script src="assets/assetsjs/dokkai.js"></script>
+</body>
+</html>

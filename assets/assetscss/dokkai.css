@@ -1,0 +1,130 @@
+/* ======= Reset & Base ======= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+  background: #ffeef4;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* ======= Container ======= */
+.container {
+  max-width: 90%;               /* pakai persen agar fleksibel */
+  width: 600px;                 /* default di layar sedang */
+  margin: 40px auto;
+  background: #fff0f5;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Judul & Card */
+.title {
+  text-align: center;
+  color: #d63384;
+  font-size: clamp(1.6rem, 2vw, 2.5rem); /* scalable font */
+}
+
+.card {
+  margin: 15px 0;
+  padding: 15px;
+  background: #fff;
+  border-radius: 15px;
+  font-size: clamp(1rem, 1.2vw, 1.3rem);
+}
+
+/* ======= Buttons ======= */
+.btn {
+  background: #ff80ab;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 5px;
+  font-size: clamp(1rem, 1.2vw, 1.3rem);
+  transition: background 0.2s;
+}
+.btn:hover {
+  background: #f06292;
+}
+
+/* ======= Opsi Jawaban ======= */
+.options button {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  background: #ffe4ec;
+  border: 1px solid #ff80ab;
+  border-radius: 8px;
+  font-size: clamp(1rem, 1.1vw, 1.2rem);
+  transition: background 0.2s;
+}
+.correct { background: #b2f5b2 !important; }
+.wrong   { background: #ffb2b2 !important; }
+
+/* ======= Layout Theme Grid ======= */
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+.theme-grid .btn {
+  font-size: clamp(1rem, 1.2vw, 1.3rem);
+  text-align: center;
+}
+
+/* ======= Typography & Ruby ======= */
+ruby { ruby-position: over; }
+rt   { font-size: 0.6em; color: #555; }
+
+/* ======= Media Queries ======= */
+/* --- Tablet portrait & ponsel besar --- */
+@media (max-width: 1024px) {
+  .container {
+    width: 95%;
+    margin: 20px auto;
+    padding: 16px;
+  }
+  .card { padding: 12px; }
+  .btn, .options button { padding: 8px 14px; }
+}
+
+/* --- Ponsel (≤720px) --- */
+@media (max-width: 720px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .card, .options button {
+    font-size: 1rem;
+  }
+  .container {
+    border-radius: 12px;
+    padding: 14px;
+  }
+}
+
+/* --- Layar besar (≥2560px, 4K) --- */
+@media (min-width: 2560px) {
+  .container {
+    max-width: 1200px;           /* sedikit lebih lebar */
+    padding: 40px;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .card {
+    font-size: 1.6rem;
+  }
+  .btn, .options button {
+    font-size: 1.5rem;
+    padding: 14px 24px;
+  }
+}
